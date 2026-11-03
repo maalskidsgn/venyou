@@ -14,7 +14,7 @@ const indexierung = process.env.NEXT_PUBLIC_INDEXIERUNG === "1";
 
 export const metadata: Metadata = {
   title: "VENYOU",
-  description: "Driven by sound. Connected by people.",
+  description: "Driven by sound. Connected by people. VENYOU Events.",
   robots: indexierung ? undefined : { index: false, follow: false },
 };
 
