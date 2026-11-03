@@ -8,7 +8,7 @@ Weiterentwicklung übernimmt Tanju.
 
 | Zugang | Wofür | Status |
 |---|---|---|
-| GitHub-Repo `venyou` (privat) | Quellcode, Änderungen per Push | Einladung an Tanjus GitHub-Konto nötig |
+| GitHub-Repo https://github.com/maalskidsgn/venyou | Quellcode, Änderungen per Push auf `main` | Tanju wird als Collaborator eingeladen |
 | Dev-Umgebung https://venyou.2.28.31.213.sslip.io | Aktueller Stand live, nicht bei Google | läuft |
 | Newsletter rapidmail | Formular „Beyond Public“ | hat Tanju bereits |
 | Instagram @tanjufz | verlinkt | hat Tanju |
@@ -34,7 +34,7 @@ Nicht nötig für Tanju: SSH auf den Server. Deploy läuft über Manuel (siehe 4
 ## 3. Lokal arbeiten
 
 ```bash
-git clone <repo-url> venyou && cd venyou
+git clone https://github.com/maalskidsgn/venyou.git && cd venyou
 npm install
 npm run dev        # http://localhost:3500
 ```
@@ -54,8 +54,10 @@ Baut auf dem Server und tauscht den Container. Konfiguration liegt nur auf dem
 Server in `/opt/venyou/.env.produktion`:
 `HOST_ADRESSE`, `WP_API_URL`, `NEXT_PUBLIC_INDEXIERUNG` (0 = Google gesperrt).
 
-Wunsch für später: Push auf `main` löst den Deploy automatisch aus. Dann braucht
-Tanju Manuel nicht mehr zum Veröffentlichen.
+**Automatisch:** Ein Wächter auf dem Server prüft alle 2 Minuten GitHub `main`.
+Neuer Commit = bauen + live. Tanju pusht, 3–4 Minuten später ist es online.
+Log auf dem Server: `/var/log/venyou-autodeploy.log`.
+Einrichtung (einmalig, Manuel): `bash /opt/venyou/werkzeuge/autodeploy-einrichten.sh`.
 
 ## 5. Wo was liegt
 
