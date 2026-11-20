@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 import { Logo, Cross } from "./Logo";
 import { site } from "@/lib/site";
@@ -29,9 +30,15 @@ export default function Footer() {
       </Reveal>
       <div className="mt-24 flex items-end justify-between">
         <Logo className="w-[50vw] md:w-[30vw]" />
-        <div className="flex items-center gap-8">
-          <span className="label text-muted">© {new Date().getFullYear()} VENYOU</span>
-          <Cross className="h-6 w-auto" />
+        <div className="flex flex-col items-end gap-4">
+          <nav className="flex flex-wrap justify-end gap-x-6 gap-y-2">
+            <Link href="/impressum" className="label link-underline text-muted transition hover:text-fg"><T k="nav_imprint" /></Link>
+            <Link href="/datenschutz" className="label link-underline text-muted transition hover:text-fg"><T k="nav_privacy" /></Link>
+          </nav>
+          <div className="flex items-center gap-8">
+            <span className="label text-muted">© {new Date().getFullYear()} VENYOU</span>
+            <Cross className="h-6 w-auto" />
+          </div>
         </div>
       </div>
     </footer>
