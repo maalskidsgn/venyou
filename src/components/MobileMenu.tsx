@@ -1,17 +1,17 @@
 "use client";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import Link from "next/link";
+import ScrollLink from "./ScrollLink";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLenis } from "lenis/react";
 import { Cross } from "./Logo";
 import { LangSwitch, useT } from "./Locale";
 import { site } from "@/lib/site";
-import type { Key } from "@/lib/i18n";
+import SocialLinks from "./SocialLinks";
+import { navItems as items } from "@/lib/nav";
 
 const ease = [0.22, 1, 0.36, 1] as const;
-const items: [Key, string][] = [["nav_events", "/events"], ["nav_impressions", "/eindruecke"], ["nav_tanju", "/tanju"], ["nav_contact", "/#kontakt"]];
 
 export default function MobileMenu() {
   const t = useT();
@@ -41,10 +41,10 @@ export default function MobileMenu() {
               </button>
             </div>
             <nav className="flex flex-col gap-2">
-              {items.map(([k, h], i) => (
+              {items.map(([k, id], i) => (
                 <motion.div key={k} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }}
                   transition={{ delay: 0.25 + i * 0.07, duration: 0.8, ease }}>
-                  <Link href={h} onClick={() => setOpen(false)} className="headline block py-2 text-[13vw] leading-none active:text-accent">{t(k)}</Link>
+                  <ScrollLink id={id} onNavigate={() => setOpen(false)} className="headline block py-2 text-[13vw] leading-none active:text-accent">{t(k)}</ScrollLink>
                 </motion.div>
               ))}
             </nav>
@@ -53,8 +53,8 @@ export default function MobileMenu() {
               <div>
                 <p className="label text-muted">{t("booking")}</p>
                 <a href={`mailto:${site.booking}`} className="label mt-1 block">{site.booking}</a>
-                <a href={site.instagram} target="_blank" rel="noreferrer" className="label mt-3 block text-accent">Instagram ↗</a>
-                <a href={site.newsletterUrl} target="_blank" rel="noreferrer" className="label mt-2 block text-accent">{t("newsletter")} ↗</a>
+                <a href={site.whatsappCommunity} target="_blank" rel="noreferrer" className="label mt-3 block text-accent">{t("community_cta")} ↗</a>
+                <SocialLinks className="mt-5" />
               </div>
               <Cross className="h-6 w-auto" />
             </motion.div>

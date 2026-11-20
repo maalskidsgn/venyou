@@ -69,7 +69,7 @@ export const imprint: Record<Locale, LegalDoc> = {
 export const privacy: Record<Locale, LegalDoc> = {
   de: {
     title: "Datenschutz",
-    intro: "Wir nehmen den Schutz deiner Daten ernst. Diese Website kommt ohne Tracking, ohne Analyse-Tools und ohne Werbe-Cookies aus. Hier steht, welche Daten trotzdem anfallen und was mit ihnen passiert.",
+    intro: "Wir nehmen den Schutz deiner Daten ernst. Diese Website kommt ohne Tracking, ohne Analyse-Tools und ohne Werbe-Cookies aus. Externe Inhalte (Spotify-Player) werden erst nach deinem Klick geladen. Hier steht, welche Daten trotzdem anfallen und was mit ihnen passiert.",
     updated: "Stand: November 2026",
     sections: [
       {
@@ -116,19 +116,27 @@ export const privacy: Record<Locale, LegalDoc> = {
         ],
       },
       {
-        h: "8. Links zu Instagram und anderen Websites",
+        h: "8. Links zu Instagram, SoundCloud, WhatsApp und anderen Websites",
         p: [
-          "Auf dieser Website verlinken wir u. a. auf Instagram (Meta Platforms Ireland Ltd.). Es handelt sich um einfache Links, nicht um eingebettete Inhalte oder Plugins: Erst wenn du einen Link anklickst, werden Daten an den jeweiligen Anbieter übertragen. Dafür gilt dessen Datenschutzerklärung.",
+          "Auf dieser Website verlinken wir auf Instagram (Meta Platforms Ireland Ltd.), SoundCloud (SoundCloud Global Limited & Co. KG), unsere WhatsApp-Community (WhatsApp Ireland Ltd.) und Spotify. Es handelt sich um einfache Links, nicht um eingebettete Inhalte oder Plugins: Erst wenn du einen Link anklickst, werden Daten an den jeweiligen Anbieter übertragen. Dafür gilt dessen Datenschutzerklärung.",
+          "Wenn du unserer WhatsApp-Community beitrittst, sehen die Administratoren und andere Mitglieder deine Telefonnummer und deinen Profilnamen. Du kannst die Community jederzeit wieder verlassen.",
         ],
       },
       {
-        h: "9. Fotos von Events",
+        h: "9. Spotify-Player",
+        p: [
+          "Auf der Startseite kannst du unsere Playlist in einem Spotify-Player abspielen (Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Schweden). Der Player wird erst geladen, wenn du auf „Player laden“ klickst. Vorher wird keine Verbindung zu Spotify hergestellt.",
+          "Nach dem Klick überträgt dein Browser Daten an Spotify, u. a. deine IP-Adresse und technische Informationen über dein Gerät; Spotify kann dabei Cookies setzen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Weitere Infos: spotify.com/de/legal/privacy-policy",
+        ],
+      },
+      {
+        h: "10. Fotos von Events",
         p: [
           "Auf unseren Events wird fotografiert und gefilmt. Ausgewählte Aufnahmen zeigen wir auf dieser Website und auf Social Media, um über unsere Events zu berichten (Art. 6 Abs. 1 lit. f DSGVO). Wenn du auf einem Foto zu sehen bist und es entfernt haben möchtest, schreib uns einfach an office@venyou-event.com.",
         ],
       },
       {
-        h: "10. Deine Rechte",
+        h: "11. Deine Rechte",
         p: [
           "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21). Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen.",
           "Du kannst dich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren. Für uns zuständig ist: Der Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover.",
@@ -136,14 +144,14 @@ export const privacy: Record<Locale, LegalDoc> = {
         ],
       },
       {
-        h: "11. Verschlüsselung",
+        h: "12. Verschlüsselung",
         p: ["Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Du erkennst das am Schloss-Symbol und an „https://“ in der Adresszeile."],
       },
     ],
   },
   en: {
     title: "Privacy",
-    intro: "We take the protection of your data seriously. This website uses no tracking, no analytics tools and no advertising cookies. This page explains which data is still processed and what happens to it. Translation for convenience; the German version is legally binding.",
+    intro: "We take the protection of your data seriously. This website uses no tracking, no analytics tools and no advertising cookies. External content (Spotify player) is only loaded after you click. This page explains which data is still processed and what happens to it. Translation for convenience; the German version is legally binding.",
     updated: "Last updated: November 2026",
     sections: [
       {
@@ -190,19 +198,27 @@ export const privacy: Record<Locale, LegalDoc> = {
         ],
       },
       {
-        h: "8. Links to Instagram and other websites",
+        h: "8. Links to Instagram, SoundCloud, WhatsApp and other websites",
         p: [
-          "This website links to Instagram (Meta Platforms Ireland Ltd.) and other sites. These are plain links, not embedded content or plugins: data is only transferred to the respective provider once you click a link. Their privacy policy applies.",
+          "This website links to Instagram (Meta Platforms Ireland Ltd.), SoundCloud (SoundCloud Global Limited & Co. KG), our WhatsApp community (WhatsApp Ireland Ltd.) and Spotify. These are plain links, not embedded content or plugins: data is only transferred to the respective provider once you click a link. Their privacy policy applies.",
+          "If you join our WhatsApp community, the admins and other members can see your phone number and profile name. You can leave the community at any time.",
         ],
       },
       {
-        h: "9. Event photos",
+        h: "9. Spotify player",
+        p: [
+          "On the home page you can play our playlist in a Spotify player (Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Sweden). The player is only loaded once you click “Load player”. Before that, no connection to Spotify is made.",
+          "After the click, your browser sends data to Spotify, including your IP address and technical information about your device; Spotify may set cookies. The legal basis is your consent given by clicking (Art. 6 (1) (a) GDPR, § 25 (1) TDDDG). More information: spotify.com/legal/privacy-policy",
+        ],
+      },
+      {
+        h: "10. Event photos",
         p: [
           "Photos and videos are taken at our events. We show selected shots on this website and on social media to report on our events (Art. 6 (1) (f) GDPR). If you appear in a photo and would like it removed, just email us at office@venyou-event.com.",
         ],
       },
       {
-        h: "10. Your rights",
+        h: "11. Your rights",
         p: [
           "You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and to object to processing based on legitimate interests (Art. 21). You can withdraw any consent at any time with effect for the future.",
           "You also have the right to lodge a complaint with a data protection supervisory authority. The authority responsible for us is: Der Landesbeauftragte für den Datenschutz Niedersachsen, Prinzenstraße 5, 30159 Hannover, Germany.",
@@ -210,7 +226,7 @@ export const privacy: Record<Locale, LegalDoc> = {
         ],
       },
       {
-        h: "11. Encryption",
+        h: "12. Encryption",
         p: ["For security reasons this website uses SSL/TLS encryption. You can recognise this by the padlock icon and “https://” in the address bar."],
       },
     ],
