@@ -33,19 +33,15 @@ export default function Hero() {
           className="absolute inset-0 h-full w-full object-cover" />
       ))}
       <div className="absolute inset-0 bg-gradient-to-t from-bg via-black/20 to-black/40" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-8 px-6">
+      <div className="absolute inset-0 flex items-center justify-center px-6">
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.6, ease }}>
           <Logo className="w-[70vw] md:w-[46vw]" />
         </motion.h1>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1.6, ease }}
-          className="label text-center text-fg/80" style={{ letterSpacing: "0.2em" }}>
-          Driven by sound. Connected by people.
-        </motion.p>
       </div>
       <div className="absolute bottom-10 left-6 flex gap-2 md:left-12" aria-hidden>
         {slides.map((_, n) => <span key={n} className={`h-[2px] w-8 transition duration-700 ${n === i ? "bg-accent" : "bg-white/30"}`} />)}
       </div>
-      <Cross className="absolute bottom-10 right-6 h-7 w-auto md:right-12" />
+      <Cross variant="accent" className="absolute bottom-10 right-6 h-7 w-auto md:right-12" />
     </section>
   );
 }

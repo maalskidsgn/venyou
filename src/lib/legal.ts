@@ -69,7 +69,7 @@ export const imprint: Record<Locale, LegalDoc> = {
 export const privacy: Record<Locale, LegalDoc> = {
   de: {
     title: "Datenschutz",
-    intro: "Wir nehmen den Schutz deiner Daten ernst. Diese Website kommt ohne Tracking, ohne Analyse-Tools und ohne Werbe-Cookies aus. Externe Inhalte (Spotify-Player) werden erst nach deinem Klick geladen. Hier steht, welche Daten trotzdem anfallen und was mit ihnen passiert.",
+    intro: "Wir nehmen den Schutz deiner Daten ernst. Diese Website kommt ohne Tracking, ohne Analyse-Tools und ohne Werbe-Cookies aus. Auf der Startseite ist ein Spotify-Player eingebunden (siehe Abschnitt 9). Hier steht, welche Daten trotzdem anfallen und was mit ihnen passiert.",
     updated: "Stand: November 2026",
     sections: [
       {
@@ -125,8 +125,8 @@ export const privacy: Record<Locale, LegalDoc> = {
       {
         h: "9. Spotify-Player",
         p: [
-          "Auf der Startseite kannst du unsere Playlist in einem Spotify-Player abspielen (Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Schweden). Der Player wird erst geladen, wenn du auf „Player laden“ klickst. Vorher wird keine Verbindung zu Spotify hergestellt.",
-          "Nach dem Klick überträgt dein Browser Daten an Spotify, u. a. deine IP-Adresse und technische Informationen über dein Gerät; Spotify kann dabei Cookies setzen. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Weitere Infos: spotify.com/de/legal/privacy-policy",
+          "Auf der Startseite kannst du unsere Playlist in einem Spotify-Player abspielen (Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Schweden). Der Player wird geladen, sobald du zu diesem Bereich der Seite scrollst.",
+          "Dabei überträgt dein Browser Daten an Spotify, u. a. deine IP-Adresse und technische Informationen über dein Gerät; Spotify kann dabei Cookies setzen. Wir binden den Player ein, um unsere Musik direkt auf der Website hörbar zu machen (Art. 6 Abs. 1 lit. f DSGVO). Weitere Infos: spotify.com/de/legal/privacy-policy",
         ],
       },
       {
@@ -151,7 +151,7 @@ export const privacy: Record<Locale, LegalDoc> = {
   },
   en: {
     title: "Privacy",
-    intro: "We take the protection of your data seriously. This website uses no tracking, no analytics tools and no advertising cookies. External content (Spotify player) is only loaded after you click. This page explains which data is still processed and what happens to it. Translation for convenience; the German version is legally binding.",
+    intro: "We take the protection of your data seriously. This website uses no tracking, no analytics tools and no advertising cookies. The home page includes an embedded Spotify player (see section 9). This page explains which data is still processed and what happens to it. Translation for convenience; the German version is legally binding.",
     updated: "Last updated: November 2026",
     sections: [
       {
@@ -207,8 +207,8 @@ export const privacy: Record<Locale, LegalDoc> = {
       {
         h: "9. Spotify player",
         p: [
-          "On the home page you can play our playlist in a Spotify player (Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Sweden). The player is only loaded once you click “Load player”. Before that, no connection to Spotify is made.",
-          "After the click, your browser sends data to Spotify, including your IP address and technical information about your device; Spotify may set cookies. The legal basis is your consent given by clicking (Art. 6 (1) (a) GDPR, § 25 (1) TDDDG). More information: spotify.com/legal/privacy-policy",
+          "On the home page you can play our playlist in a Spotify player (Spotify AB, Regeringsgatan 19, 111 53 Stockholm, Sweden). The player is loaded as soon as you scroll to this part of the page.",
+          "Your browser then sends data to Spotify, including your IP address and technical information about your device; Spotify may set cookies. We embed the player so that our music can be played directly on the website (Art. 6 (1) (f) GDPR). More information: spotify.com/legal/privacy-policy",
         ],
       },
       {

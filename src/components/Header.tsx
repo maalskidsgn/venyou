@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { Logo } from "./Logo";
 import MobileMenu from "./MobileMenu";
 import ScrollLink from "./ScrollLink";
@@ -13,11 +12,8 @@ export default function Header() {
   const t = useT();
   const pathname = usePathname();
   const lenis = useLenis();
-  const { scrollY } = useScroll();
-  const bg = useTransform(scrollY, [0, 200], ["rgba(10,10,10,0)", "rgba(10,10,10,0.8)"]);
   return (
-    <motion.header style={{ backgroundColor: bg }}
-      className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-5 text-fg backdrop-blur-sm md:px-12">
+    <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-bg px-6 py-5 text-fg md:px-12">
       <Link href="/" aria-label="VENYOU – Startseite" onClick={(e) => {
         if (pathname !== "/") return;
         e.preventDefault();
@@ -31,6 +27,6 @@ export default function Header() {
         <LangSwitch className="hidden md:flex" />
         <MobileMenu />
       </div>
-    </motion.header>
+    </header>
   );
 }

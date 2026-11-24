@@ -51,10 +51,10 @@ export default function MobileMenu() {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ delay: 0.6, duration: 0.8 }}
               className="flex items-end justify-between">
               <div>
-                <p className="label text-muted">{t("booking")}</p>
-                <a href={`mailto:${site.booking}`} className="label mt-1 block">{site.booking}</a>
+                <p className="label text-muted">{t("contact")}</p>
+                <a href={`mailto:${site.contactEmail}`} className="label mt-1 block">{site.contactEmail}</a>
                 <a href={site.whatsappCommunity} target="_blank" rel="noreferrer" className="label mt-3 block text-accent">{t("community_cta")} ↗</a>
-                <SocialLinks className="mt-5" />
+                <SocialLinks className="mt-5 gap-5" />
               </div>
               <Cross className="h-6 w-auto" />
             </motion.div>

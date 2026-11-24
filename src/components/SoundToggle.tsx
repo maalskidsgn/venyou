@@ -54,7 +54,7 @@ export default function SoundToggle() {
       {ready && (
         <motion.button onClick={toggle} aria-label={on ? t("sound_off") : t("sound_on")}
           initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5, duration: 1 }}
-          className="label fixed bottom-6 left-6 z-[55] flex items-center gap-3 text-fg mix-blend-difference md:left-12">
+          className="label fixed bottom-20 left-6 z-[55] flex items-center gap-3 text-fg mix-blend-difference md:left-12">
           <span className="flex h-4 items-end gap-[3px]">
             {[0, 1, 2, 3].map((i) => (
               <motion.span key={i} className="w-[2px] bg-current"

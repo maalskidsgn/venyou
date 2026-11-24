@@ -8,6 +8,7 @@ export const site = {
   spotifyEmbed: "https://open.spotify.com/embed/playlist/6tZ8SpKYhGRycVMKHpfXmu?utm_source=generator&theme=0",
   whatsappCommunity: "https://chat.whatsapp.com/K8Hduq10hg08js8jAQBTcf",
   booking: "booking@venyou-event.com",
+  contactEmail: "office@venyou-event.com", // Kontakt-Section + Handy-Menü
 };
 
 // LINE-UP 2026: Namen für den Laufband-Ticker auf der Startseite.
