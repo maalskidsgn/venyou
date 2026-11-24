@@ -6,7 +6,7 @@ export const site = {
   spotifyPlaylist: "https://open.spotify.com/playlist/6tZ8SpKYhGRycVMKHpfXmu",
   // Embed-Adresse derselben Playlist (für den Player auf der Startseite)
   spotifyEmbed: "https://open.spotify.com/embed/playlist/6tZ8SpKYhGRycVMKHpfXmu?utm_source=generator&theme=0",
-  whatsappCommunity: "https://chat.whatsapp.com/K8Hduq10hg08js8jAQBTcf",
+  whatsappCommunity: "https://chat.whatsapp.com/Lm22SPkocRP4524cLH8hZj?mode=gi_t",
   booking: "booking@venyou-event.com",
   contactEmail: "office@venyou-event.com", // Kontakt-Section + Handy-Menü
 };
