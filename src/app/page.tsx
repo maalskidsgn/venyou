@@ -1,16 +1,16 @@
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import LineupTicker from "@/components/LineupTicker";
-import Eindruecke from "@/components/Eindruecke";
+import MediaSlider from "@/components/MediaSlider";
 import SpotifyPlayer from "@/components/SpotifyPlayer";
 import { socialPaths } from "@/components/SocialLinks";
 import { T } from "@/components/Locale";
-import { homeGallery } from "@/lib/images";
+import { impressions } from "@/lib/content";
 import { site } from "@/lib/site";
 
 // Startseite als One-Pager:
 // Hero · Vision · Line-up-Ticker · Fotogalerie · Community · Spotify · Contact · (Footer im Layout)
-// Texte: src/lib/i18n.ts · Links: src/lib/site.ts · Bilder: src/lib/images.ts
+// Texte: src/lib/i18n.ts · Links: src/lib/site.ts · Fotos/Videos: src/lib/content.ts
 export default function Home() {
   const perks = [
     ["perk1_title", "perk1_text"],
@@ -44,9 +44,9 @@ export default function Home() {
       <LineupTicker />
 
       {/* FOTOGALERIE */}
-      <section id="impressions" aria-labelledby="gallery-title" className="scroll-mt-20 px-6 py-24 md:px-12 md:py-32">
+      <section id="impressions" aria-labelledby="gallery-title" className="scroll-mt-20 py-24 md:py-32">
         <h2 id="gallery-title" className="sr-only"><T k="gallery" /></h2>
-        <Eindruecke images={homeGallery} />
+        <MediaSlider items={impressions} />
       </section>
 
       {/* COMMUNITY */}

@@ -60,3 +60,7 @@ body { background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialia
 /* Korn in Logo und Schrift wie im Deck */
 .grain { filter: url(#grain); }
 .headline, .copy { filter: url(#grain); }
+
+/* Horizontaler Slider ohne sichtbare Scrollbar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
