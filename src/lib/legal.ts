@@ -99,7 +99,7 @@ export const privacy: Record<Locale, LegalDoc> = {
       {
         h: "5. Schriftarten, Bilder und Musik",
         p: [
-          "Schriftarten, Fotos und die Musik auf dieser Website werden direkt von unserem Server geladen. Es besteht keine Verbindung zu Google Fonts oder anderen externen Diensten. Die Musik startet nur, wenn du sie selbst einschaltest.",
+          "Schriftarten, Fotos und die Musik auf dieser Website werden direkt von unserem Server geladen. Es besteht keine Verbindung zu Google Fonts oder anderen externen Diensten. Die Hintergrundmusik kannst du unten links jederzeit ausschalten.",
         ],
       },
       {
@@ -181,7 +181,7 @@ export const privacy: Record<Locale, LegalDoc> = {
       {
         h: "5. Fonts, images and music",
         p: [
-          "Fonts, photos and music on this website are loaded directly from our own server. There is no connection to Google Fonts or other external services. The music only starts if you switch it on yourself.",
+          "Fonts, photos and music on this website are loaded directly from our own server. There is no connection to Google Fonts or other external services. You can switch off the background music at any time at the bottom left.",
         ],
       },
       {

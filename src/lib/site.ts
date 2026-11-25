@@ -11,6 +11,12 @@ export const site = {
   contactEmail: "office@venyou-event.com", // Kontakt-Section + Handy-Menü
 };
 
+// Hintergrundmusik (Schalter unten links). Nur Tracks, für die die Rechte vorliegen (eigene Produktionen / Freigabe).
+// Mehrere Einträge = Weiter-Taste erscheint, Tracks laufen nacheinander. Dateien: public/audio/
+export const tracks: { src: string; artist: string; title: string }[] = [
+  { src: "/audio/tanju-velvet-voices.mp3", artist: "TANJU", title: "Velvet Voices" },
+];
+
 // LINE-UP 2026: Namen für den Laufband-Ticker auf der Startseite.
 export const lineup2026 = [
   "TANJU", "KUSSI", "TOBIAS", "ROMANIC", "VALI THUN", "MIKE SLEMP", "JULI AUGUST", "FRANK RIVER", "JONAS WEHNER",
