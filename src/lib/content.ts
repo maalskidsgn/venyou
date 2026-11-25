@@ -7,12 +7,17 @@ export type Media =
   | { type: "image"; src: string; w: number; h: number }
   | { type: "video"; src: string; poster: string; w: number; h: number; title: string; venue: string };
 
-// Hero: kurze Sequenzen mit Abblenden ins Schwarz. Desktop zeigt alle drei nebeneinander, Handy nur das erste.
-// poster = Standbild, das angezeigt wird, falls der Browser Videos nicht automatisch abspielt (z. B. Stromsparmodus).
-export const heroVideos: { src: string; poster: string }[] = [
-  { src: "/content/hero/hero-a.mp4", poster: "/content/hero/poster-a.webp" },
-  { src: "/content/hero/hero-b.mp4", poster: "/content/hero/poster-b.webp" },
-  { src: "/content/hero/hero-c.mp4", poster: "/content/hero/poster-c.webp" },
+// Hero (Landingpage): genau drei Elemente.
+// Desktop: drei Panels nebeneinander in dieser Reihenfolge. Handy: wechseln nacheinander mit weichen Übergängen
+// (Video zuerst, dann die Fotos). poster = Standbild, falls der Browser das Video nicht automatisch startet.
+export type HeroItem =
+  | { type: "image"; src: string }
+  | { type: "video"; src: string; poster: string };
+
+export const hero: HeroItem[] = [
+  { type: "image", src: "/content/fotos/venyouhotelvelo-54.webp" },
+  { type: "video", src: "/content/hero/hero-atoukolu.mp4", poster: "/content/hero/hero-atoukolu.webp" },
+  { type: "image", src: "/content/fotos/venyouhotelvelo-47.webp" },
 ];
 
 export const impressions: Media[] = [
