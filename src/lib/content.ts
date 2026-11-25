@@ -8,9 +8,7 @@ export type Media =
   | { type: "video"; src: string; poster: string; w: number; h: number; title: string; venue: string };
 
 // Hero (Landingpage)
-// Desktop: nur die Fotos, im Breitformat, wechseln mit weicher Überblendung und Rauszoom-Effekt.
-// Handy: Video zuerst, danach die Fotos (ebenfalls mit Rauszoom).
-// position = welcher Bildausschnitt im Breitformat sichtbar bleibt (CSS object-position, z. B. "50% 60%").
+// Handy: Video zuerst, danach die Fotos, mit weicher Überblendung und Rauszoom-Effekt.
 // poster = Standbild, falls der Browser das Video nicht automatisch startet.
 export type HeroItem =
   | { type: "image"; src: string; position?: string }
@@ -18,8 +16,17 @@ export type HeroItem =
 
 export const hero: HeroItem[] = [
   { type: "video", src: "/content/hero/hero-atoukolu.mp4", poster: "/content/hero/hero-atoukolu.webp" },
-  { type: "image", src: "/content/fotos/venyouhotelvelo-54.webp", position: "50% 62%" },
-  { type: "image", src: "/content/fotos/venyouhotelvelo-47.webp", position: "50% 48%" },
+  { type: "image", src: "/content/fotos/venyouhotelvelo-54.webp" },
+  { type: "image", src: "/content/fotos/venyouhotelvelo-47.webp" },
+];
+
+// Desktop: drei Panels nebeneinander, jedes ist eine eigene Diashow (dunklere Fotos).
+// Die Panels wechseln zeitversetzt. Reihenfolge innerhalb einer Liste = Reihenfolge im Panel.
+const f = (name: string) => `/content/fotos/${name}.webp`;
+export const heroDesktopColumns: string[][] = [
+  [f("venyouhotelvelo-54"), f("de6a9575"), f("venyouhotelvelo-86"), f("tanju-flashy-look-2"), f("venyouhotelvelo-103")],
+  [f("tanju-prst-2-bw-ausschnitt"), f("venyouhotelvelo-91"), f("de6a9710"), f("venyouhotelvelo-92"), f("venyou-community-event")],
+  [f("tanju-flashy-look-3"), f("venyouhotelvelo-87"), f("de6a9604"), f("venyouhotelvelo-80"), f("venyouhotelvelo-98"), f("venyouhotelvelo-46")],
 ];
 
 export const impressions: Media[] = [
