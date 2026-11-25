@@ -8,7 +8,7 @@ export type Media =
   | { type: "video"; src: string; poster: string; w: number; h: number; title: string; venue: string };
 
 // Hero (Landingpage)
-// Handy: Video zuerst, danach die Fotos, mit weicher Überblendung und Rauszoom-Effekt.
+// Handy: Videos und Fotos im Wechsel (Reihenfolge wie unten), weiche Überblendung, Fotos mit Rauszoom-Effekt.
 // poster = Standbild, falls der Browser das Video nicht automatisch startet.
 export type HeroItem =
   | { type: "image"; src: string; position?: string }
@@ -17,7 +17,9 @@ export type HeroItem =
 export const hero: HeroItem[] = [
   { type: "video", src: "/content/hero/hero-atoukolu.mp4", poster: "/content/hero/hero-atoukolu.webp" },
   { type: "image", src: "/content/fotos/venyouhotelvelo-54.webp" },
+  { type: "video", src: "/content/hero/hero-crowd-donaukanal.mp4", poster: "/content/hero/hero-crowd-donaukanal.webp" },
   { type: "image", src: "/content/fotos/venyouhotelvelo-47.webp" },
+  { type: "video", src: "/content/hero/hero-crowd-hands.mp4", poster: "/content/hero/hero-crowd-hands.webp" },
 ];
 
 // Desktop: drei Panels nebeneinander, jedes ist eine eigene Diashow (dunklere Fotos).

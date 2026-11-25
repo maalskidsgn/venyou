@@ -59,6 +59,7 @@ function Slideshow({ items, startDelay = 0 }: { items: HeroItem[]; startDelay?: 
     // Nächstes Foto schon vorladen, damit die Überblendung nicht ins Leere geht
     const upcoming = items[(i + 1) % items.length];
     if (upcoming.type === "image") new Image().src = upcoming.src;
+    else new Image().src = upcoming.poster; // Standbild des nächsten Videos vorladen
     // Fester Takt, damit es auch weiterläuft, wenn der Browser Autoplay blockiert
     const wait = (item.type === "video" ? VIDEO_MS : PHOTO_MS) + (i === 0 ? startDelay : 0);
     const id = setTimeout(() => setI((cur) => cur + 1), wait);
