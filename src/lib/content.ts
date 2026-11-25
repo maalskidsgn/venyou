@@ -8,10 +8,11 @@ export type Media =
   | { type: "video"; src: string; poster: string; w: number; h: number; title: string; venue: string };
 
 // Hero: kurze Sequenzen mit Abblenden ins Schwarz. Desktop zeigt alle drei nebeneinander, Handy nur das erste.
-export const heroVideos: string[] = [
-  "/content/hero/hero-a.mp4",
-  "/content/hero/hero-b.mp4",
-  "/content/hero/hero-c.mp4",
+// poster = Standbild, das angezeigt wird, falls der Browser Videos nicht automatisch abspielt (z. B. Stromsparmodus).
+export const heroVideos: { src: string; poster: string }[] = [
+  { src: "/content/hero/hero-a.mp4", poster: "/content/hero/poster-a.webp" },
+  { src: "/content/hero/hero-b.mp4", poster: "/content/hero/poster-b.webp" },
+  { src: "/content/hero/hero-c.mp4", poster: "/content/hero/poster-c.webp" },
 ];
 
 export const impressions: Media[] = [

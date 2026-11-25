@@ -10,7 +10,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 // Desktop: drei Hochformat-Panels nebeneinander (versetzt). Handy: ein Panel im Vollbild.
 // Videos: public/content/hero/ · Liste: src/lib/content.ts (heroVideos)
 export default function Hero() {
-  const [panels, setPanels] = useState<string[]>([]);
+  const [panels, setPanels] = useState<typeof heroVideos>([]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -23,10 +23,10 @@ export default function Hero() {
   return (
     <section className="relative h-[100svh] overflow-hidden bg-bg" aria-label="VENYOU">
       <div className="absolute inset-0 flex gap-[2px]">
-        {panels.map((src, n) => (
+        {panels.map(({ src, poster }, n) => (
           <motion.div key={src} className="relative h-full flex-1 overflow-hidden"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.6, delay: n * 0.25, ease }}>
-            <video src={src} autoPlay muted loop playsInline preload="auto" aria-hidden="true" tabIndex={-1}
+            <video src={src} poster={poster} autoPlay muted loop playsInline preload="auto" aria-hidden="true" tabIndex={-1}
               className="absolute inset-0 h-full w-full object-cover" />
           </motion.div>
         ))}
