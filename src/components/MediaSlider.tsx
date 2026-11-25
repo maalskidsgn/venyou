@@ -63,13 +63,8 @@ export default function MediaSlider({ items }: { items: Media[] }) {
           <figure key={m.src} className="relative h-[62svh] max-h-[780px] shrink-0 snap-center md:h-[74vh]"
             style={{ aspectRatio: `${m.w} / ${m.h}` }}>
             {m.type === "video" ? (
-              <>
-                <video src={m.src} poster={m.poster} muted loop playsInline preload="none"
-                  className="h-full w-full bg-white/5 object-cover" aria-label={`${m.title} @ ${m.venue}`} />
-                <figcaption className="label pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-12">
-                  <span className="text-fg">{m.title}</span> <span className="text-accent">@{m.venue}</span>
-                </figcaption>
-              </>
+              <video src={m.src} poster={m.poster} muted loop playsInline preload="none"
+                className="h-full w-full bg-white/5 object-cover" aria-label="VENYOU Event-Video" />
             ) : (
               <img src={m.src} alt="VENYOU Event" width={m.w} height={m.h} draggable={false}
                 loading={i < 4 ? "eager" : "lazy"} decoding="async" className="h-full w-full bg-white/5 object-cover" />

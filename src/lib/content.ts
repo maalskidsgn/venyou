@@ -7,21 +7,23 @@ export type Media =
   | { type: "image"; src: string; w: number; h: number }
   | { type: "video"; src: string; poster: string; w: number; h: number; title: string; venue: string };
 
-// Hero (Landingpage): genau drei Elemente.
-// Desktop: drei Panels nebeneinander in dieser Reihenfolge. Handy: wechseln nacheinander mit weichen Übergängen
-// (Video zuerst, dann die Fotos). poster = Standbild, falls der Browser das Video nicht automatisch startet.
+// Hero (Landingpage)
+// Desktop: nur die Fotos, im Breitformat, wechseln mit weicher Überblendung und Rauszoom-Effekt.
+// Handy: Video zuerst, danach die Fotos (ebenfalls mit Rauszoom).
+// position = welcher Bildausschnitt im Breitformat sichtbar bleibt (CSS object-position, z. B. "50% 60%").
+// poster = Standbild, falls der Browser das Video nicht automatisch startet.
 export type HeroItem =
-  | { type: "image"; src: string }
+  | { type: "image"; src: string; position?: string }
   | { type: "video"; src: string; poster: string };
 
 export const hero: HeroItem[] = [
-  { type: "image", src: "/content/fotos/venyouhotelvelo-54.webp" },
   { type: "video", src: "/content/hero/hero-atoukolu.mp4", poster: "/content/hero/hero-atoukolu.webp" },
-  { type: "image", src: "/content/fotos/venyouhotelvelo-47.webp" },
+  { type: "image", src: "/content/fotos/venyouhotelvelo-54.webp", position: "50% 62%" },
+  { type: "image", src: "/content/fotos/venyouhotelvelo-47.webp", position: "50% 48%" },
 ];
 
 export const impressions: Media[] = [
-  { type: "image", src: "/content/fotos/tanju-prst-2.webp", w: 1800, h: 1005 },
+  { type: "image", src: "/content/fotos/tanju-prst-2-bw.webp", w: 1800, h: 1005 },
   { type: "video", src: "/content/videos/clip-02.mp4", poster: "/content/videos/clip-02.webp", w: 540, h: 960, title: "Allein Allein", venue: "VENYOU" },
   { type: "image", src: "/content/fotos/venyouhotelvelo-87.webp", w: 1440, h: 1800 },
   { type: "image", src: "/content/fotos/de6a9665.webp", w: 1800, h: 1200 },

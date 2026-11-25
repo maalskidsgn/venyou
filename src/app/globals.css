@@ -61,11 +61,6 @@ body { background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialia
 .grain { filter: url(#grain); }
 .headline, .copy { filter: url(#grain); }
 
-/* Hero-Fotos: langsames "Atmen" (leichter Zoom), damit sie lebendig wirken */
-@keyframes hero-breathe { from { transform: scale(1); } to { transform: scale(1.05); } }
-.hero-breathe { animation: hero-breathe 12s ease-in-out infinite alternate; }
-@media (prefers-reduced-motion: reduce) { .hero-breathe { animation: none; } }
-
 /* Horizontaler Slider ohne sichtbare Scrollbar */
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
