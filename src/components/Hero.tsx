@@ -10,6 +10,7 @@ const VIDEO_MS = 6000; // Länge des Hero-Clips (nur Handy)
 const FADE_S = 1.6; // Dauer der Überblendung
 const ZOOM_FROM = 1.15; // Startzoom der Fotos, zoomt langsam auf 1 heraus
 const DESKTOP_OFFSET_MS = 2300; // Versatz zwischen den drei Desktop-Panels
+const HERO_DESKTOP_SLIDES = false; // true = drei Diashows auf dem Desktop, false = schwarz
 
 // Hero (Inhalte: src/lib/content.ts → hero)
 // Desktop: drei Panels mit eigener Diashow, zeitversetzt. Handy: Video + Fotos. Fotos zoomen jeweils langsam heraus.
@@ -26,7 +27,8 @@ export default function Hero() {
 
   return (
     <section className="relative h-[100svh] overflow-hidden bg-bg" aria-label="VENYOU">
-      {desktop === true && (
+      {/* Desktop: vorerst nur schwarzer Hintergrund mit Logo. Diashow wieder an: HERO_DESKTOP_SLIDES = true */}
+      {desktop === true && HERO_DESKTOP_SLIDES && (
         <div className="absolute inset-0 flex gap-[2px]">
           {heroDesktopColumns.map((col, n) => (
             <motion.div key={n} className="relative h-full flex-1 overflow-hidden"

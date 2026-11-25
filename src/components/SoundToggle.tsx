@@ -82,7 +82,6 @@ export default function SoundToggle() {
             </span>
             <span>{on ? t("sound_on") : t("sound_off")}</span>
           </button>
-          {on && <span className="hidden opacity-60 md:inline">{track.artist} – {track.title}</span>}
           {multi && on && (
             <button onClick={next} aria-label="Nächster Track" className="opacity-80 transition hover:opacity-100">→</button>
           )}
